@@ -1,0 +1,2 @@
+class RecepyBook < ApplicationRecord
+end
