@@ -1,0 +1,9 @@
+<h1><%= @recepy_book.name %></h1>
+
+<ul>
+  <% @recepies.each do |recepy| %>
+    <li>
+      <span><%= recepy.title %></span>
+    </li>
+  <% end %>
+</ul>

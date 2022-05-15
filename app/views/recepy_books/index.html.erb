@@ -1,0 +1,16 @@
+<h1>RecepyBooks</h1>
+
+<ul>
+  <li><%= link_to 'new', new_recepy_book_path %></li>
+</ul>
+
+
+<ul>
+  <% @recepy_books.each do |recepy_book| %>
+    <li>
+      <span><%= link_to recepy_book.name, recepy_book %></span>
+      <span><%= link_to 'edit', edit_recepy_book_path(recepy_book) %></span>
+      <span><%= button_to 'destroy', recepy_book, method: :delete %></span>
+    </li>
+  <% end %>
+</ul>
