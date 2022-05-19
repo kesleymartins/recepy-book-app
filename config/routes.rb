@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   root "pages#home"
   get '/about', to: "pages#about"
 
-  resources :recepy_books
+  resources :recepy_books do
+    resources :recepies, except: %i[ index ]
+  end
 end

@@ -1,9 +1,11 @@
 <h1><%= @recepy_book.name %></h1>
 
+<%= link_to 'New Recepy', new_recepy_book_recepy_path(@recepy_book) %>
+
 <ul>
   <% @recepies.each do |recepy| %>
     <li>
-      <span><%= recepy.title %></span>
+      <span><%= link_to recepy.title, recepy_book_recepy_path(recepy) %></span>
     </li>
   <% end %>
 </ul>

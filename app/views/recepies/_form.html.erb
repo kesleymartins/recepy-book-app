@@ -1,0 +1,20 @@
+<%= form_with(model: [@recepy_book, @recepy]) do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :preparation_time %>
+    <%= f.number_field :preparation_time %>
+  </div>
+
+  <div>
+    <%= f.label :portion %>
+    <%= f.number_field :portion %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
